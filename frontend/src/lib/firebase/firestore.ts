@@ -23,3 +23,8 @@ export function getUsersCollection() {
 export function userDoc(uid: string) {
   return doc(getUsersCollection(), uid)
 }
+
+import type { Note } from '@/types/firestore'
+export function getNotesCollection() {
+return typedCollection<Note>('notes')
+}
